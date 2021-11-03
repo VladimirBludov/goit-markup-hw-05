@@ -1,20 +1,16 @@
 /* Common styles */
 
 :root {
-  --primary-text-color: #757575;
+  --primary-text-color: #a39595;
   --title-text-color: #212121;
   --accent-color: #2196f3;
-  --secondary-accent-color: #188ce8;
   --primary-white-color: #ffffff;
   --primary-black-color: #000000;
-  --secondary-white-color: rgba(255, 255, 255, 0.6);
   --secondary-bg-color: #2f303a;
   --third-bg-color: #f5f4fa;
-  --fourth-bg-color: rgba(47, 48, 58, 0.8);
-  --footer-bg-link-color: rgba(255, 255, 255, 0.1);
-  --border-bottom-colors: #ececec;
-  --secondary-border-bottom-colors: #eeeeee;
   --primary-icon-color: #afb1b8;
+
+  --animation-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -67,7 +63,7 @@ ul {
 
 .header-conteiner {
   display: flex;
-  border-bottom: 1px solid var(--border-bottom-colors);
+  border-bottom: 1px solid #ececec;
 }
 
 .nav {
@@ -121,7 +117,7 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--animation-cubic);
   outline: none;
   text-decoration: none;
 }
@@ -174,7 +170,7 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--animation-cubic);
   outline: none;
   text-decoration: none;
 }
@@ -253,13 +249,13 @@ ul {
 .contacts-footer .link {
   display: block;
 
-  color: var(--secondary-white-color);
+  color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--animation-cubic);
   outline: none;
   text-decoration: none;
 }
@@ -300,9 +296,9 @@ ul {
   border-radius: 50%;
 
   color: var(--primary-white-color);
-  background-color: var(--footer-bg-link-color);
+  background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--animation-cubic);
   outline: none;
 }
 
@@ -364,13 +360,13 @@ ul {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--animation-cubic);
   cursor: pointer;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--secondary-accent-color);
+  background-color: #188ce8;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -463,7 +459,7 @@ ul {
   text-transform: uppercase;
 
   color: var(--primary-white-color);
-  background-color: var(--fourth-bg-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Team section */
@@ -546,8 +542,8 @@ ul {
 
   color: var(--primary-icon-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--animation-cubic),
+    background-color 250ms var(--animation-cubic);
   outline: none;
 }
 
@@ -594,8 +590,8 @@ ul {
 
   color: var(--primary-icon-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--animation-cubic),
+    background-color 250ms var(--animation-cubic);
   outline: none;
 }
 
@@ -639,9 +635,9 @@ ul {
   line-height: 1.62;
   letter-spacing: 0.03em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--animation-cubic),
+    background-color 250ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic);
 
   cursor: pointer;
   outline: none;
@@ -681,7 +677,7 @@ ul {
 
   color: var(--primary-text-color);
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms var(--animation-cubic);
   text-decoration: none;
   outline: none;
 }
@@ -692,15 +688,45 @@ ul {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.works-list .img-container {
+  position: relative;
+  overflow: hidden;
+}
+
 .works-list .img {
   display: block;
 }
 
+.works-list .description {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--animation-cubic);
+}
+
+.works-list .link:hover .description,
+.works-list .link:focus .description {
+  transform: translateY(0);
+}
+
 .works-list .content {
   padding: 20px 24px;
-  border-right: 1px solid var(--secondary-border-bottom-colors);
-  border-bottom: 1px solid var(--secondary-border-bottom-colors);
-  border-left: 1px solid var(--secondary-border-bottom-colors);
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 .works-list .title {
@@ -717,4 +743,69 @@ ul {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+}
+
+/* Modal window */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms var(--animation-cubic),
+    visibility 250ms var(--animation-cubic);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop .modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+
+  width: 528px;
+  height: 581px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: var(--primary-white-color);
+
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1, 1);
+  transition: opacity 250ms var(--animation-cubic),
+    transform 250ms var(--animation-cubic);
+}
+
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5, 0.5);
+}
+
+.backdrop .button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  background: var(--primary-white-color);
+
+  cursor: pointer;
 }
