@@ -316,8 +316,7 @@ ul {
 /* Hero section */
 
 .hero {
-  height: 600px;
-  width: 1600px;
+  max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 200px;
@@ -591,7 +590,7 @@ ul {
   color: var(--primary-icon-color);
 
   transition: color 250ms var(--animation-cubic),
-    background-color 250ms var(--animation-cubic);
+    border-color 250ms var(--animation-cubic);
   outline: none;
 }
 
