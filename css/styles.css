@@ -118,7 +118,6 @@ ul {
   letter-spacing: 0.02em;
 
   transition: color 250ms var(--animation-cubic);
-  outline: none;
   text-decoration: none;
 }
 
@@ -171,7 +170,6 @@ ul {
   letter-spacing: 0.02em;
 
   transition: color 250ms var(--animation-cubic);
-  outline: none;
   text-decoration: none;
 }
 
@@ -256,7 +254,6 @@ ul {
   letter-spacing: 0.03em;
 
   transition: color 250ms var(--animation-cubic);
-  outline: none;
   text-decoration: none;
 }
 
@@ -299,7 +296,6 @@ ul {
   background-color: rgba(255, 255, 255, 0.1);
 
   transition: background-color 250ms var(--animation-cubic);
-  outline: none;
 }
 
 .footer-social-list .social-link:hover,
@@ -543,7 +539,6 @@ ul {
 
   transition: color 250ms var(--animation-cubic),
     background-color 250ms var(--animation-cubic);
-  outline: none;
 }
 
 .team-social-list .social-link:hover,
@@ -591,7 +586,6 @@ ul {
 
   transition: color 250ms var(--animation-cubic),
     border-color 250ms var(--animation-cubic);
-  outline: none;
 }
 
 .clients-list .item-link:hover,
@@ -639,7 +633,6 @@ ul {
     box-shadow 250ms var(--animation-cubic);
 
   cursor: pointer;
-  outline: none;
 }
 
 .filter-list .button:hover,
@@ -678,7 +671,6 @@ ul {
 
   transition: box-shadow 250ms var(--animation-cubic);
   text-decoration: none;
-  outline: none;
 }
 
 .works-list .link:hover,
